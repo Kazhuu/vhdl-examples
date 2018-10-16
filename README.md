@@ -1,6 +1,6 @@
 # VHDL examples
 
-Repository to contain my VHDL examples for different topics. Topics are organized in subfolders.
+Repository to contain my VHDL examples for a different topics. Topics are organized in subfolders.
 
 ## How to use
 
