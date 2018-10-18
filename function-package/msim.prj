@@ -1,5 +1,5 @@
 builder = msim
 target_dir = .build
 
-vhdl f_lib f_lib/function_pkg.vhd
-vhdl work test.vhd
+vhdl f_lib f_lib/function_pkg.vhd -2002
+vhdl work test.vhd -2002
