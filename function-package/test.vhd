@@ -7,12 +7,24 @@ end;
 
 
 architecture tb of test is
+
 	constant FIRST_NAME : string := "Jon";
 	constant LAST_NAME : string := "Snow";
+
+	signal print : boolean := true;
+	signal end_simulation : boolean := true;
+
 begin
-	assert false report "hello() result: " & hello
+
+	print <= false after 1 ps;
+	end_simulation <= false after 2 ps;
+
+	-- Hello World
+	assert print report "hello() result: " & hello
 	severity note;
 
-	assert false report "hello_for() result: " & hello_for(FIRST_NAME, LAST_NAME)
+	-- Hello Jon Snow
+	assert end_simulation report "hello_for() result: " & hello_for(FIRST_NAME, LAST_NAME)
 	severity note;
+
 end tb;
