@@ -7,7 +7,7 @@ Repository to contain my VHDL examples for a different topics. Topics are organi
 Examples can be compiled for ModelSim with [hdlcc](https://github.com/suoto/hdlcc).
 This Python backend is automatically used with [vim-hdl](https://github.com/suoto/vim-hdl) Vim plugin.
 
-Vim needs to be started in example folder with VHDL source file.
+Vim needs to be started in example folder with VHDL source file or without.
 ```
 vim test.vhd
 ```
@@ -16,7 +16,8 @@ Then the plugin searches for `msim.prj` in the same folder and compiles the sour
 cd .build/
 vsim &
 ```
-In ModelSim open `test.vhd` file under `work` library. Testbench can be run with ModelSim console.
+In ModelSim open `test.vhd` file under `work` library. Then run testbench in ModelSim console.
 ```
-run 10 ns
+run
 ```
+Testbench will run and then stop automatically.
