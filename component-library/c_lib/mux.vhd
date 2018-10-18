@@ -12,5 +12,7 @@ end entity;
 
 architecture rtl of mux is
 begin
+
 	d <= b when s = '1' else a;
+
 end architecture;
