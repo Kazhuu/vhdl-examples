@@ -1,10 +1,10 @@
 # VHDL examples
 
-Repository to contain my VHDL examples for different topics. Topics are organized in subfolders.
+Repository to contain my VHDL examples for a different topics. Topics are organized in subfolders.
 
 ## How to use
 
-Examples can be compiled for ModelSim with [hdlcc](https://github.com/suoto/hdlcc/wiki).
+Examples can be compiled for ModelSim with [hdlcc](https://github.com/suoto/hdlcc).
 This Python backend is automatically used with [vim-hdl](https://github.com/suoto/vim-hdl) Vim plugin.
 
 Vim needs to be started in example folder with VHDL source file.
