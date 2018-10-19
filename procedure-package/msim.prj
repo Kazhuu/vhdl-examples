@@ -1,0 +1,5 @@
+builder = msim
+target_dir = .build
+
+vhdl p_lib p_lib/procedure_pkg.vhd -2002
+vhdl work test.vhd -2002
