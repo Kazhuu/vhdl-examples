@@ -11,12 +11,12 @@ Vim needs to be started in example subfolder with VHDL source file or without.
 ```
 vim test.vhd
 ```
-Then the plugin searches for `msim.prj` in the same folder and compiles the sources according to it. All compiled code is then placed in the `.build` subfolder. In this subfolder ModelSim can be started and it should read all compiled code and libraries without errors.
+Then the plugin searches for `msim.prj` in the same folder and compiles the sources according to it. All compiled code is then placed in the `.build` subfolder. In this subfolder ModelSim can be started and it should read all compiled code and libraries without errors. ModelSim can be given with the desing to simulate.
 ```
 cd .build/
-vsim &
+vsim work.test
 ```
-In ModelSim open `test.vhd` file under `work` library. Then run testbench in ModelSim console.
+In VHDL compiled `test.vhd` is located under under `work` library by default. Then run testbench in ModelSim console.
 ```
 run
 ```
