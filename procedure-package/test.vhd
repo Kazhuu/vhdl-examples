@@ -21,6 +21,6 @@ begin
 
 	assert end_simulation
 	report "hello() result: " & hello_result
-	severity error;
+	severity failure;
 
 end architecture;

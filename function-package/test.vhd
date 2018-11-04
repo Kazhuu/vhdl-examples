@@ -25,6 +25,6 @@ begin
 
 	-- Hello Jon Snow
 	assert end_simulation report "hello_for() result: " & hello_for(FIRST_NAME, LAST_NAME)
-	severity note;
+	severity failure;
 
 end tb;

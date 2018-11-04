@@ -41,6 +41,6 @@ begin
 	-- "count: 3 postponed count: 2"
 	assert end_simulation
 	report "count: " & integer'image(trg_count) & " postponed count: " & integer'image(postponed_trg_count)
-	severity error;
+	severity failure;
 
 end architecture;

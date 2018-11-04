@@ -26,6 +26,6 @@ begin
 
 	assert end_simulation
 	report "simulation ended"
-	severity error;
+	severity failure;
 
 end architecture;

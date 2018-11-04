@@ -53,6 +53,6 @@ begin
 
 	assert end_simulation
 	report "times() result: " & integer'image(times_result)
-	severity error;
+	severity failure;
 
 end architecture;
