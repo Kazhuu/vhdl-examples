@@ -15,12 +15,10 @@ architecture tb of test is
         age : natural;
     end record;
 
-
     constant jon : person := (
         "Jon Snow",
         30
     );
-
 
 begin
 
