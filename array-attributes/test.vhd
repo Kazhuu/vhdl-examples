@@ -15,8 +15,6 @@ architecture tb of test is
 
     signal mem : vl_4by8;
 
-
-
 begin
 
     process (mem)
@@ -34,6 +32,15 @@ begin
         -- Lower bound.
         report "'LOW(1): " & Integer'image(mem'low(1)); -- 'LOW(1): 0
         report "'LOW(2): " & Integer'image(mem'low(2)); -- 'LOW(2): 0
+        -- Ranges.
+        report "'RANGE: 3 to 0";
+        report "'REVERSE_RANGE(2): 7 downto 0";
+        -- Length.
+        report "'LENGTH: " & Integer'image(mem'length); -- 'LENGTH: 4
+        report "'LENGTH(2): " & Integer'image(mem'length(2)); -- 'LENGTH(2): 8
+        -- Ascending.
+        report "'ASCENDING: " & Boolean'image(mem'ascending); -- 'ASCENDING: false
+        report "'ASCENDING(2): " & Boolean'image(mem'ascending(2)); -- 'ASCENDING: true
     end process;
 
     end_simulation <= false after 1 ps;
