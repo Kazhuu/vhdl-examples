@@ -45,10 +45,10 @@ begin
         -- Value before given value in base of type.
         report "vl'pred('0'): " & vl'image(vl'pred('0')); -- 'X'
         report "v10'pred('1'): " & vl'image(v01'pred('1')); -- '0'
-        -- Value left of given value in base of type.
+        -- Value left of given value in type.
         report "vl'leftof('1'): " & vl'image(vl'leftof('1')); -- '0'
         report "v10'leftof('0'): " & vl'image(v10'leftof('0')); -- '1'
-        -- Value right of given value in base of type.
+        -- Value right of given value in type.
         report "vl'rightof('0'): " & vl'image(vl'rightof('0')); -- '1'
         report "v10'rightof('1'): " & vl'image(v10'rightof('1')); -- '0'
         -- True if ascending.
