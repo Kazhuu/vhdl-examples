@@ -10,8 +10,8 @@ architecture tb of test is
 
     signal end_simulation : boolean := true;
     signal test : std_logic := '0';
-    signal stable_test : boolean := false;
-    signal delta_stable_test : boolean := false;
+    signal stable_test : boolean := true;
+    signal delta_stable_test : boolean := true;
 
 begin
 
@@ -23,15 +23,17 @@ begin
     -- last delta cycle.
     delta_stable_test <= test'stable;
 
-    assert stable_test
+    -- This will be printed at start of simulation and at 3 ps.
+    assert not stable_test
     report "stable_test: " & time'image(now)
     severity note;
 
-    assert delta_stable_test
+    -- This will be printed at start of simulation and at 1 ps.
+    assert not delta_stable_test
     report "delta_stable_test: " & time'image(now)
     severity note;
 
-    end_simulation <= false after 3 ps;
+    end_simulation <= false after 4 ps;
     assert end_simulation
     report "simulation ended"
     severity failure;
