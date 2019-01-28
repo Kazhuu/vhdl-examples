@@ -1,0 +1,5 @@
+builder = msim
+target_dir = .build
+
+vhdl work delayed.vhd -2002
+vhdl work stable.vhd -2002
