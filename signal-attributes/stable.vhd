@@ -2,11 +2,11 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 
-entity test is
+entity stable is
 end entity;
 
 
-architecture tb of test is
+architecture tb of stable is
 
     signal end_simulation : boolean := true;
     signal test : std_logic := '0';
