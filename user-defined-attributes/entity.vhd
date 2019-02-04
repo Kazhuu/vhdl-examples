@@ -15,7 +15,6 @@ end entity;
 architecture tb of entity_attribute is
 
     signal end_simulation : boolean := true;
-    signal test : std_logic;
 
 begin
 
