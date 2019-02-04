@@ -1,0 +1,6 @@
+builder = msim
+target_dir = .build
+
+vhdl work entity.vhd -2002
+vhdl work signal.vhd -2002
+vhdl work all-signals.vhd -2002
