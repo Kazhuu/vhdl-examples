@@ -3,4 +3,5 @@ target_dir = .build
 
 vhdl work entity.vhd -2002
 vhdl work signal.vhd -2002
-vhdl work all-signals.vhd -2002
+vhdl work all-keyword.vhd -2002
+vhdl work others-keyword.vhd -2002

@@ -2,11 +2,11 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 
-entity all_signals is
+entity all_keyword is
 end entity;
 
 
-architecture tb of all_signals is
+architecture tb of all_keyword is
 
     signal end_simulation : boolean := true;
     signal test1, test2 : std_logic;
