@@ -16,6 +16,7 @@ architecture tb of all_keyword is
     -- Associate attribute with all visible signals with all keyword and
     -- their return value.
     -- Both test1 and test2 will be associated with the hello attribute.
+    -- Works similarly to others keyword.
     attribute hello of all : signal is "hello signals";
 
 begin
