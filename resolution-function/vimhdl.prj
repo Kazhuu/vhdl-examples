@@ -1,5 +1,6 @@
 builder = msim
 target_dir = .build
 
-vhdl work test.vhd -2002
+vhdl work resolved_signal.vhd -2002
 vhdl work resolution_pkg.vhd -2002
+vhdl work resolved_vector.vhd -2002
