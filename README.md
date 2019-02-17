@@ -21,3 +21,11 @@ In VHDL compiled `test.vhd` is located under under `work` library by default. Th
 run
 ```
 Testbench will run, print results and then stop automatically.
+
+## Missing topics
+
+* Access types and how to use them.
+* Different ways to instantiate a component.
+* Configure examples.
+* Use of generics.
+* Block statements and signal kinds `bus` and `register` and how they behave.
