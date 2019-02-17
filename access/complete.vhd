@@ -2,6 +2,9 @@ entity complete is
 end entity;
 
 
+-- Access type works similarly to pointers in other programming languages like
+-- C. New allocation is made with new keyword and null can be assigned to
+-- pointer to mean unallocated variable.
 architecture tb of complete is
 
     -- Declare record type.
