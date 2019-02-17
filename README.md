@@ -31,3 +31,4 @@ Testbench will run, print results and then stop automatically.
 * Shared variable and how to use.
 * Different wait statements with process.
 * Example components?
+* Three main different ways to implement state machines.
