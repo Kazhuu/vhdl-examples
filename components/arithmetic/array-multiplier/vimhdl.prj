@@ -1,0 +1,4 @@
+builder = msim
+target_dir = .build
+
+vhdl work bit_multiplier.vhd -2002
