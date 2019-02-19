@@ -1,0 +1,6 @@
+builder = msim
+target_dir = .build
+
+vhdl test_lib test_lib/mux.vhd -2008
+vhdl test_lib test_lib/lib_context.vhd -2008
+vhdl work test.vhd -2008
