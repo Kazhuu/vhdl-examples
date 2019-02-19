@@ -2,6 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 
+-- Compiled to test_lib library.
 entity mux is
     port (
         a, b, s : in std_logic;
