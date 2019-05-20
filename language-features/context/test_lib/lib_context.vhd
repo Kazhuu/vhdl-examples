@@ -1,6 +1,6 @@
 -- Declare context which can be used in some other design with context
 -- keyword. This is like an entry point to this library.
--- Using context make inlcuding multiple libraries less tedious and
+-- Using context make including multiple libraries less tedious and
 -- easier. This context is compiled to test_lib library.
 context lib_context is
     library ieee;

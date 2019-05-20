@@ -32,3 +32,4 @@ Testbench will run, print results and then stop automatically.
 * Different wait statements with process.
 * Example components?
 * Three main different ways to implement state machines.
+* Use VUnit to implement basic testing examples.
