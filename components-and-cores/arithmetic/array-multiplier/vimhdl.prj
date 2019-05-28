@@ -2,3 +2,4 @@ builder = msim
 target_dir = .build
 
 vhdl work bit_multiplier.vhd -2008
+vhdl work bit_multiplier_tb.vhd -2008

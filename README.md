@@ -33,3 +33,7 @@ Testbench will run, print results and then stop automatically.
 * Example components?
 * Three main different ways to implement state machines.
 * Use VUnit to implement basic testing examples.
+* Use VHDL 2008 env package (std.env.finish for instance).
+* Example to show that 'work' is not a library but a reference to same library
+    where this element is defined (example:
+    https://github.com/VUnit/vunit/issues/497).
