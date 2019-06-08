@@ -16,7 +16,7 @@ architecture rtl of bit_multiplier is
     signal xy : std_logic;
 begin
     xy <= x_in and y_in;
-    c_out <= (p_in and xy) or (p_in or c_in) or (xy or c_in);
+    c_out <= (p_in and xy) or (p_in and c_in) or (xy and c_in);
     p_out <= p_in xor xy xor c_in;
     -- Wire inputs bits right to output bits for chaining.
     x_out <= x_in;

@@ -1,4 +1,3 @@
--- TODO: Finish this test bench with carry and p testings.
 library ieee;
 library vunit_lib;
 
@@ -25,7 +24,7 @@ begin
                 x_in <= '1';
                 wait for 1 ps;
 
-                check(x_out = '1');
+                check_equal(x_out, '0');
                 check(y_out = '0');
                 check(p_out = '0');
                 check(c_out = '0');
@@ -37,7 +36,7 @@ begin
                 check(y_out = '1');
                 check(p_out = '0');
                 check(c_out = '0');
-            elsif run("multiply_with_x_and_y") then
+            elsif run("multiply_with_x_y") then
                 x_in <= '1';
                 y_in <= '1';
                 wait for 1 ps;
@@ -45,13 +44,51 @@ begin
                 check(x_out = '1');
                 check(y_out = '1');
                 check(p_out = '1');
-                check(c_out = '1');
+                check(c_out = '0');
             elsif run("multiply_with_partial") then
                 p_in <= '1';
                 wait for 1 ps;
 
                 check(x_out = '0');
                 check(y_out = '0');
+                check(p_out = '1');
+                check(c_out = '0');
+            elsif run("multiply_with_carry") then
+                c_in <= '1';
+                wait for 1 ps;
+
+                check(x_out = '0');
+                check(y_out = '0');
+                check(p_out = '1');
+                check(c_out = '0');
+            elsif run("multiply_with_partial_carry") then
+                p_in <= '1';
+                c_in <= '1';
+                wait for 1 ps;
+
+                check(x_out = '0');
+                check(y_out = '0');
+                check(p_out = '0');
+                check(c_out = '1');
+            elsif run("multiply_with_partial_carry_x") then
+                x_in <= '1';
+                p_in <= '1';
+                c_in <= '1';
+                wait for 1 ps;
+
+                check(x_out = '1');
+                check(y_out = '0');
+                check(p_out = '0');
+                check(c_out = '1');
+            elsif run("multiply_with_partial_carry_x_y") then
+                x_in <= '1';
+                y_in <= '1';
+                p_in <= '1';
+                c_in <= '1';
+                wait for 1 ps;
+
+                check(x_out = '1');
+                check(y_out = '1');
                 check(p_out = '1');
                 check(c_out = '1');
             end if;
