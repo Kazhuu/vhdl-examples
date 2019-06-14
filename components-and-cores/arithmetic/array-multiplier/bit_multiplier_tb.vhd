@@ -6,7 +6,7 @@ context vunit_lib.vunit_context;
 
 
 entity tb_bit_multiplier is
-    generic (runner_cfg : string);
+    generic(runner_cfg : string);
 end entity;
 
 
@@ -24,62 +24,62 @@ begin
                 x_in <= '1';
                 wait for 1 ps;
 
-                check_equal(x_out, '0');
-                check(y_out = '0');
-                check(p_out = '0');
-                check(c_out = '0');
+                check_equal(x_out, '1');
+                check_equal(y_out, '0');
+                check_equal(p_out, '0');
+                check_equal(c_out, '0');
             elsif run("multiply_with_y") then
                 y_in <= '1';
                 wait for 1 ps;
 
-                check(x_out = '0');
-                check(y_out = '1');
-                check(p_out = '0');
-                check(c_out = '0');
+                check_equal(x_out, '0');
+                check_equal(y_out, '1');
+                check_equal(p_out, '0');
+                check_equal(c_out, '0');
             elsif run("multiply_with_x_y") then
                 x_in <= '1';
                 y_in <= '1';
                 wait for 1 ps;
 
-                check(x_out = '1');
-                check(y_out = '1');
-                check(p_out = '1');
-                check(c_out = '0');
+                check_equal(x_out, '1');
+                check_equal(y_out, '1');
+                check_equal(p_out, '1');
+                check_equal(c_out, '0');
             elsif run("multiply_with_partial") then
                 p_in <= '1';
                 wait for 1 ps;
 
-                check(x_out = '0');
-                check(y_out = '0');
-                check(p_out = '1');
-                check(c_out = '0');
+                check_equal(x_out, '0');
+                check_equal(y_out, '0');
+                check_equal(p_out, '1');
+                check_equal(c_out, '0');
             elsif run("multiply_with_carry") then
                 c_in <= '1';
                 wait for 1 ps;
 
-                check(x_out = '0');
-                check(y_out = '0');
-                check(p_out = '1');
-                check(c_out = '0');
+                check_equal(x_out, '0');
+                check_equal(y_out, '0');
+                check_equal(p_out, '1');
+                check_equal(c_out, '0');
             elsif run("multiply_with_partial_carry") then
                 p_in <= '1';
                 c_in <= '1';
                 wait for 1 ps;
 
-                check(x_out = '0');
-                check(y_out = '0');
-                check(p_out = '0');
-                check(c_out = '1');
+                check_equal(x_out, '0');
+                check_equal(y_out, '0');
+                check_equal(p_out, '0');
+                check_equal(c_out, '1');
             elsif run("multiply_with_partial_carry_x") then
                 x_in <= '1';
                 p_in <= '1';
                 c_in <= '1';
                 wait for 1 ps;
 
-                check(x_out = '1');
-                check(y_out = '0');
-                check(p_out = '0');
-                check(c_out = '1');
+                check_equal(x_out, '1');
+                check_equal(y_out, '0');
+                check_equal(p_out, '0');
+                check_equal(c_out, '1');
             elsif run("multiply_with_partial_carry_x_y") then
                 x_in <= '1';
                 y_in <= '1';
@@ -87,10 +87,10 @@ begin
                 c_in <= '1';
                 wait for 1 ps;
 
-                check(x_out = '1');
-                check(y_out = '1');
-                check(p_out = '1');
-                check(c_out = '1');
+                check_equal(x_out, '1');
+                check_equal(y_out, '1');
+                check_equal(p_out, '1');
+                check_equal(c_out, '1');
             end if;
         end loop;
         test_runner_cleanup(runner);
