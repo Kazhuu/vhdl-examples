@@ -36,13 +36,11 @@ begin
         yi(0, i) <= y_in(i);
         pi(0, i+1) <= '0';
         result_out(i) <= pi(i+1, 0);
-        result_out(i+y_in'length) <= pi(y_in'length, i);
+        result_out(i+y_in'length) <= pi(y_in'length, i+1);
     end generate;
 
     assert result_out'length = x_in'length + y_in'length
     report "result_out'length(" & integer'image(result_out'length) & ") must be equal x_in'lenght("
         & integer'image(x_in'length) & ") + y_in'length(" & integer'image(y_in'length) & ")"
     severity failure;
-
-
 end architecture;
