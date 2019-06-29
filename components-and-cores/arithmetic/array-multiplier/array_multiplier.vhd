@@ -1,7 +1,8 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-
+-- Array multiplier based on the book: VHDL: Modular Design and Synthesis of Cores
+-- and Systems on page 307.
 entity array_multiplier is
     port(
         x_in : in std_logic_vector;
@@ -16,6 +17,7 @@ architecture rtl of array_multiplier is
 
     signal xi, yi, pi, ci : std_logic_2d_t;
 begin
+    -- Generate cells of bit_multipliers in form of two dimensional array.
     rows: for i in x_in'range generate
         cols: for j in y_in'range generate
             cell: entity work.bit_multiplier port map(
@@ -25,13 +27,14 @@ begin
         end generate;
     end generate;
 
-
+    -- Generate left and right side of signals used by the array multiplier.
     right_and_left_side: for i in x_in'range generate
         xi(i, 0) <= x_in(i);
         ci(i, 0) <= '0';
         pi(i+1, y_in'length) <= ci(i, y_in'length);
     end generate;
 
+    -- Generate top and bottom side of signals used by the array multiplier.
     top_and_bottom_side: for i in y_in'range generate
         yi(0, i) <= y_in(i);
         pi(0, i+1) <= '0';

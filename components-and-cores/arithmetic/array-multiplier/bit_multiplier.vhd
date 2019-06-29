@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 
--- bit_multiplier based on the book: VHDL: Modular Design and Synthesis of Cores
+-- Bit multiplier based on the book: VHDL: Modular Design and Synthesis of Cores
 -- and Systems on page 307.
 entity bit_multiplier is
     port (
