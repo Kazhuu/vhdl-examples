@@ -6,3 +6,4 @@ vhdl work instruction_register.vhd -2008
 vhdl work program_counter.vhd -2008
 vhdl work alu.vhd -2008
 vhdl work datapath.vhd -2008
+vhdl work controller.vhd -2008
