@@ -44,8 +44,7 @@ begin
 
     -- Wire rest of the signals like data busses and their logic.
     b_side <= "00" & ir_out(5 downto 0);
-    address_bus <= ir_out(5 downto 0)
-        when ir_on_address = '1' else (others => 'Z');
+    address_bus <= ir_out(5 downto 0) when ir_on_address = '1' else (others => 'Z');
     address_bus <= pc_out when pc_on_address = '1' else (others => 'Z');
     dbus <= alu_out when alu_on_dbus = '1' else (others => 'Z');
     dbus <= data_bus when data_on_dbus = '1' else (others => 'Z');

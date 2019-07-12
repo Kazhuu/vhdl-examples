@@ -4,8 +4,8 @@ use ieee.std_logic_1164.all;
 
 entity controller is
     port(
-        rst : in std_logic;
         clk : in std_logic;
+        rst : in std_logic;
         op_code : in std_logic_vector(1 downto 0);
         read_mem : out std_logic;
         write_mem : out std_logic;
@@ -77,20 +77,20 @@ begin
             when execute =>
                 next_state <= fetch;
                 case op_code is
-                    when "00" =>
+                    when "00" => -- load
                         ir_on_address <= '1';
                         read_mem <= '1';
                         data_on_dbus <= '1';
                         load_ac <= '1';
-                    when "01" =>
+                    when "01" => -- store
                         dbus_on_data <= '1';
                         alu_on_dbus <= '1';
                         pass <= '1';
                         write_mem <= '1';
                         ir_on_address <= '1';
-                    when "10" =>
+                    when "10" => -- jump
                         load_pc <= '1';
-                    when "11" =>
+                    when "11" => -- add
                         add <= '1';
                         alu_on_dbus <= '1';
                         load_ac <= '1';

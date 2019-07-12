@@ -7,3 +7,5 @@ vhdl work program_counter.vhd -2008
 vhdl work alu.vhd -2008
 vhdl work datapath.vhd -2008
 vhdl work controller.vhd -2008
+vhdl work adding_cpu.vhd -2008
+vhdl work adding_cpu_tb.vhd -2008
