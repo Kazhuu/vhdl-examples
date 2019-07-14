@@ -1,6 +1,0 @@
-builder = msim
-target_dir = .build
-
-vhdl work datapath.vhd -2008
-vhdl work shift_and_add_multiplier.vhd -2008
-vhdl work shift_and_add_multiplier_tb.vhd -2008
