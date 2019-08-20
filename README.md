@@ -35,6 +35,7 @@ root.
 ## Missing VHDL topics
 
 * Different ways to instantiate a component.
+* Qualified expression.
 * Configure examples.
 * Use of generics.
 * Block statements and signal kinds `bus` and `register` and how they behave.
@@ -42,6 +43,7 @@ root.
 * Different wait statements with process.
 * Three main different ways to implement state machines.
 * Use VHDL 2008 env package (std.env.finish for instance).
+* Reduction operator e.g. `xxx <= and yyy`.
 * Example to show that 'work' is not a library but a reference to same library
     where this element is defined (example:
     https://github.com/VUnit/vunit/issues/497).
